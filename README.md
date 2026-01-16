@@ -139,7 +139,7 @@ pnpm lint     # Verificação de lint
 - Formatação automática de WhatsApp
 - Envio via EmailJS
 
-### Responsividade
+### Responsividadegit
 
 - Mobile-first design
 - Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
