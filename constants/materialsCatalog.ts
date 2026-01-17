@@ -1,6 +1,6 @@
 export type MaterialItem = {
-  id: string // materialId único
-  sectionId: string // ex: "enseada" | "espelho" | "cais" | "praia"
+  id: string 
+  sectionId: string 
   sectionTitle: string
   materialTitle: string
   materialLink: string // pode iniciar vazio ""
@@ -15,7 +15,7 @@ export const MATERIALS_CATALOG: Record<string, MaterialItem> = {
     sectionId: "enseada",
     sectionTitle: "A Enseada",
     materialTitle: "Aprendendo a parar",
-    materialLink: "",
+    materialLink: "https://drive.google.com/file/d/1JNdxGeESKLVQRd_i6Dc1PzA9ztp6RfL9/view?usp=drive_link",
     clientEmailSubject: "Novo download — A Enseada: Aprendendo a parar",
     userEmailSubject: "Seu material: Aprendendo a parar",
   },
