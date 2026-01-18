@@ -24,7 +24,7 @@ export const MATERIALS_CATALOG: Record<string, MaterialItem> = {
     sectionId: "enseada",
     sectionTitle: "A Enseada",
     materialTitle: "Escutando o corpo",
-    materialLink: "",
+    materialLink: "https://docs.google.com/presentation/d/1vm8mvQQF5SDAjvsrBauq_T5SKMYmtqgde8deusyZvWc/edit?usp=drive_link",
     clientEmailSubject: "Novo download — A Enseada: Escutando o corpo",
     userEmailSubject: "Seu material: Escutando o corpo",
   },
