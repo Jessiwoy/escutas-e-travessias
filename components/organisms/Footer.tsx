@@ -402,7 +402,8 @@ export const Footer = () => {
   return (
     <footer className="bg-neutral-taupe border-t border-primary-brown/20" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.25fr_1fr_1fr_1fr] gap-8 lg:gap-10 mb-8">
           {/* Brand Section */}
           <div className="lg:col-span-1 animate-fade-in-up">
             <h3 className="text-lg md:text-xl font-serif font-semibold text-primary-brown mb-4">
@@ -426,7 +427,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               {[
                 { label: "Início", id: "hero" },
-                { label: "Sobre", id: "intro" },
+                { label: "Sobre", id: "nascente" },
                 { label: "Serviços", id: "corrente" },
                 { label: "Contato", id: "contato" },
               ].map((link) => (
