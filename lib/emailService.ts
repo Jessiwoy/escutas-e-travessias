@@ -39,7 +39,7 @@ export const sendLeadEmails = async (leadData: LeadData): Promise<{ success: boo
 
   try {
     const clientTemplateParams = {
-      source: "Download (material)",
+      source: "Download de material",
       lead_name: name,
       lead_email: email,
       lead_whatsapp: "-",
