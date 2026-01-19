@@ -12,51 +12,39 @@ export const EnseadaSection = () => {
 
   const cards = [
     {
-      icon: <Wind className="w-8 h-8" />,
+      icon: <Wind className="w-6 h-6" />,
       title: "Aprendendo a parar",
       description: "porque parar é, hoje, um ato de coragem.",
       borderColor: "border-primary-brown",
-      materialId: "enseada_1", // Adicionado materialId
-      content: `Aprendendo a Parar
-
-Este material oferece práticas simples e eficazes para interromper o fluxo automático das tarefas e redescobrir o espaço entre um compromisso e outro. 
-
-Parar não é desistir: é abrir espaço para existir com consciência.
-
-🌊 Baixar o guia e começar agora`,
+      materialId: "enseada_1",
+      fullContent: "Este material oferece práticas simples e eficazes para interromper o fluxo automático das tarefas e redescobrir o espaço entre um compromisso e outro.",
+      highlight: "Parar não é desistir: é abrir espaço para existir com consciência.",
+      ctaText: "Baixar o guia e começar agora",
     },
     {
-      icon: <Flower2 className="w-8 h-8" />,
+      icon: <Flower2 className="w-6 h-6" />,
       title: "Escutando o corpo",
       description: "o corpo fala, mesmo quando a mente insiste em seguir.",
       borderColor: "border-primary-orange",
-      materialId: "enseada_2", // Adicionado materialId
-      content: `Escutando o Corpo
-
-Este material reúne exercícios de reconexão sensorial baseados em estudos sobre sobrecarga e autorregulação. 
-
-A escuta do corpo é o primeiro passo para a restauração da energia vital.
-
-🌺 Quero escutar meu corpo`,
+      materialId: "enseada_2",
+      fullContent: "Este material reúne exercícios de reconexão sensorial baseados em estudos sobre sobrecarga e autorregulação.",
+      highlight: "A escuta do corpo é o primeiro passo para a restauração da energia vital.",
+      ctaText: "Quero escutar meu corpo",
     },
     {
-      icon: <Heart className="w-8 h-8" />,
+      icon: <Heart className="w-6 h-6" />,
       title: "Cultivando presença",
       description: "reconectar-se é lembrar-se de si.",
       borderColor: "border-primary-gold",
-      materialId: "enseada_3", // Adicionado materialId
-      content: `Cultivando Presença
-
-Este material propõe rituais simbólicos e gestos de autocuidado que integram corpo, afeto e espiritualidade cotidiana. 
-
-Cuidar da alma é reencontrar o ritmo natural do ser.
-
-🌙 Desejo cultivar presença`,
+      materialId: "enseada_3",
+      fullContent: "Este material propõe rituais simbólicos e gestos de autocuidado que integram corpo, afeto e espiritualidade cotidiana.",
+      highlight: "Cuidar da alma é reencontrar o ritmo natural do ser.",
+      ctaText: "Desejo cultivar presença",
     },
   ]
 
-  const openModal = (title: string, content: string, materialId: string) => {
-    setModalContent({ title, content, materialId })
+  const openModal = (title: string, materialId: string) => {
+    setModalContent({ title, content: "", materialId })
     setModalOpen(true)
   }
 
@@ -88,11 +76,25 @@ Cuidar da alma é reencontrar o ritmo natural do ser.
 
               <Body>
                 Percebi que o que vale para pessoas neurodivergentes também vale para qualquer um que viva{" "}
-                <span className="font-semibold">sobrecarregado, acelerado, exausto.</span> A{" "}
-                <span className="font-semibold">Enseada</span> nasceu como um{" "}
+                <span className="font-semibold">sobrecarregado, acelerado, exausto.</span>
+              </Body>
+
+              <Body>
+                Vivemos, como descreve Byung-Chul Han, numa <span className="font-semibold">sociedade do cansaço</span> —
+                um tempo em que a produtividade e a hiperexigência substituíram o respirar. E é justamente por isso que
+                o que aprendi serve para todos: porque todos, em algum momento, precisam reencontrar o corpo e o ritmo
+                da própria alma.
+              </Body>
+
+              <Body>
+                A <span className="font-semibold">Enseada</span> nasceu como um{" "}
                 <span className="font-semibold">contraponto a esse ritmo</span> — um espaço para lembrar que o descanso
                 não é desistência, mas presença. O cuidado verdadeiro não depende de condições ideais: ele nasce de
                 pequenos gestos que cabem na vida que temos.
+              </Body>
+
+              <Body>
+                Entre areia molhada e brisa suave, a Enseada sussurra:
               </Body>
 
               <div className="bg-primary-gold/10 rounded-lg p-4 border-l-4 border-primary-gold">
@@ -120,16 +122,23 @@ Cuidar da alma é reencontrar o ritmo natural do ser.
             {cards.map((card) => (
               <div
                 key={card.title}
-                onClick={() => openModal(card.title, card.content, card.materialId)}
-                className={`p-6 md:p-8 bg-neutral-cream rounded-lg border-l-4 ${card.borderColor} hover:shadow-xl transition-all duration-300 cursor-pointer group hover:-translate-y-1`}
+                onClick={() => openModal(card.title, card.materialId)}
+                className={`p-6 md:p-8 bg-neutral-cream rounded-lg border-l-4 ${card.borderColor} hover:shadow-xl transition-all duration-300 cursor-pointer group hover:-translate-y-1 flex flex-col h-full`}
               >
-                <div className="text-primary-orange group-hover:scale-110 transition-transform duration-300 mb-4">
-                  {card.icon}
+                <div className="flex items-center gap-3 mb-3 min-w-0">
+                  <div className="text-primary-orange group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-xl font-serif font-semibold text-primary-brown group-hover:text-primary-orange transition-colors break-words min-w-0">
+                    {card.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-primary-brown mb-3 group-hover:text-primary-orange transition-colors">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-primary-brown/80">{card.description}</p>
+                <p className="text-sm text-primary-brown/80 mb-3">{card.description}</p>
+                <p className="text-sm text-primary-brown/90 mb-3">{card.fullContent}</p>
+                <p className="text-sm font-medium text-primary-brown mb-4">{card.highlight}</p>
+                <p className="text-sm text-primary-orange font-medium group-hover:underline mt-auto">
+                  {card.ctaText}
+                </p>
               </div>
             ))}
           </div>

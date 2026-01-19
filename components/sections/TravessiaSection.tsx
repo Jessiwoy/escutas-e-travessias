@@ -30,46 +30,26 @@ export const TravessiaSection = () => {
             </div>
 
             <Body>
-              Este espaço existe para que você possa voltar sempre que precisar: para respirar, reconhecer-se, descansar
-              ou simplesmente lembrar que há outros navegando também.
+              Chegamos ao fim desta apresentação, mas a jornada continua. Cada enseada, cada espelho, cada cais e cada
+              praia seguem aqui — esperando por você, sem pressa, sem julgamento.
             </Body>
 
             <Body>
-              Aqui, a <span className="font-semibold">neurodiversidade</span> é reconhecida como riqueza, não como
-              desvio. E o <span className="font-semibold">cuidado</span> é um ato de amor que inclui a si mesmo.
+              <span className="font-semibold">Escutas e Travessias</span> nasceu do que aprendi quando a vida me
+              desmontou. Foram anos de estudos, formações, terapias e buscas — mas nada me transformou tanto quanto a
+              maternidade atípica. Cuidar de alguém full time me obrigou a olhar para mim mesma com radicalidade, a
+              reconhecer os limites do que eu sabia, e a reaprender tudo — o corpo, o tempo, a fé, o cansaço, o amor.
             </Body>
 
             <Body>
-              Se estas palavras tocaram algo em você, se alguma carta futura puder iluminar um dia difícil — então este
-              trabalho já cumpriu o seu propósito.
-            </Body>
-
-            <Body>
-              Porque a beleza não está em transformar ninguém, mas em criar espaços onde cada pessoa possa florescer, no
-              seu próprio ritmo e à sua própria maneira.
+              Foi ali que descobri que o verdadeiro conhecimento não vem apenas do estudo, mas do que somos forçados a
+              desaprender para continuar. A <span className="font-semibold">neurodiversidade,</span> que antes eu
+              tentava compreender de fora, revelou-se como a própria linguagem da minha vida.
             </Body>
           </div>
         </div>
 
         <div className="space-y-6 mb-8">
-          <Body>
-            Chegamos ao fim desta apresentação, mas a jornada continua. Cada enseada, cada espelho, cada cais e cada
-            praia seguem aqui — esperando por você, sem pressa, sem julgamento.
-          </Body>
-
-          <Body>
-            <span className="font-semibold">Escutas e Travessias</span> nasceu do que aprendi quando a vida me
-            desmontou. Foram anos de estudos, formações, terapias e buscas — mas nada me transformou tanto quanto a
-            maternidade atípica. Cuidar de alguém full time me obrigou a olhar para mim mesma com radicalidade, a
-            reconhecer os limites do que eu sabia, e a reaprender tudo — o corpo, o tempo, a fé, o cansaço, o amor.
-          </Body>
-
-          <Body>
-            Foi ali que descobri que o verdadeiro conhecimento não vem apenas do estudo, mas do que somos forçados a
-            desaprender para continuar. A <span className="font-semibold">neurodiversidade,</span> que antes eu tentava
-            compreender de fora, revelou-se como a própria linguagem da minha vida.
-          </Body>
-
           <Body>
             O que compartilho aqui não é método nem doutrina — é testemunho. São fragmentos do que aprendi em cada
             porto, os faróis que me ajudaram a atravessar noites sem mapa, os gestos e saberes que encontrei e que,
@@ -79,6 +59,26 @@ export const TravessiaSection = () => {
           <Body>
             Cada palavra, cada carta, cada material é parte dessa devolução — um modo de agradecer à vida por tudo o
             que, um dia, me sustentou.
+          </Body>
+
+          <Body>
+            Este espaço existe para que você possa voltar sempre que precisar: para respirar, reconhecer-se, descansar
+            ou simplesmente lembrar que há outros navegando também.
+          </Body>
+
+          <Body>
+            Aqui, a <span className="font-semibold">neurodiversidade</span> é reconhecida como riqueza, não como desvio.
+            E o <span className="font-semibold">cuidado</span> é um ato de amor que inclui a si mesmo.
+          </Body>
+
+          <Body>
+            Se estas palavras tocaram algo em você, se alguma carta futura puder iluminar um dia difícil — então este
+            trabalho já cumpriu o seu propósito.
+          </Body>
+
+          <Body>
+            Porque a beleza não está em transformar ninguém, mas em criar espaços onde cada pessoa possa florescer, no
+            seu próprio ritmo e à sua própria maneira.
           </Body>
         </div>
 

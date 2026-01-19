@@ -12,10 +12,13 @@ export const PraiaSection = () => {
 
   const cards = [
     {
-      icon: <BookOpen className="w-8 h-8" />,
+      icon: <BookOpen className="w-6 h-6" />,
       title: "Linha 1 — Crescer Diferente",
-      description: "livros e e-books para crianças sobre neurodiversidade",
-      materialId: "praia_1", // Adicionado materialId
+      subtitle: "livros e e-books para crianças sobre neurodiversidade",
+      fullContent: "Histórias que falam de dentro da experiência neurodivergente — sem patologizar, sem explicar \"o outro\", e com a leveza da metáfora, da cor e da imaginação.",
+      highlight: "\"Livros para crianças neurodivergentes entenderem a si mesmas — e para as outras aprenderem a conviver com ternura.\"",
+      ctaText: "Ver e-books e materiais infantis",
+      materialId: "praia_1",
       content: `Linha 1 — Crescer Diferente
 
 Histórias que falam de dentro da experiência neurodivergente — sem patologizar, sem explicar "o outro", e com a leveza da metáfora, da cor e da imaginação.
@@ -25,10 +28,13 @@ Histórias que falam de dentro da experiência neurodivergente — sem patologiz
 Ver e-books e materiais infantis`,
     },
     {
-      icon: <Home className="w-8 h-8" />,
+      icon: <Home className="w-6 h-6" />,
       title: "Linha 2 — Caderno de Travessias",
-      description: "materiais práticos e terapêuticos para mães atípicas",
-      materialId: "praia_2", // Adicionado materialId
+      subtitle: "materiais práticos e terapêuticos para mães atípicas",
+      fullContent: "Materiais feitos por uma mãe para outras mães — ferramentas simples, belas e possíveis para os dias reais. São recursos que ajudam a organizar o tempo, o corpo e o cuidado familiar, sem exigir perfeição.",
+      highlight: "",
+      ctaText: "Explorar materiais para mães",
+      materialId: "praia_2",
       content: `Linha 2 — Caderno de Travessias
 
 Materiais feitos por uma mãe para outras mães — ferramentas simples, belas e possíveis para os dias reais. São recursos que ajudam a organizar o tempo, o corpo e o cuidado familiar, sem exigir perfeição.
@@ -46,8 +52,8 @@ Explorar materiais para mães`,
     <>
       <section id="praia" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="relative h-[300px] md:h-full md:min-h-[450px] rounded-lg overflow-hidden shadow-xl order-2 md:order-1">
+          <div className="grid md:grid-cols-5 gap-12 items-start">
+            <div className="relative h-[300px] md:h-full md:min-h-[450px] rounded-lg overflow-hidden shadow-xl order-2 md:order-1 md:col-span-2">
               <Image
                 src="/images/5-a-praia.png"
                 alt="Crianças brincando na praia com baldes coloridos"
@@ -57,7 +63,7 @@ Explorar materiais para mães`,
               />
             </div>
 
-            <div className="space-y-8 flex flex-col justify-start order-1 md:order-2">
+            <div className="space-y-8 flex flex-col justify-start order-1 md:order-2 md:col-span-3">
               <div>
                 <H2 className="mb-4">A Praia</H2>
                 <p className="text-lg text-primary-orange font-serif italic mt-4">
@@ -78,15 +84,22 @@ Explorar materiais para mães`,
                   <div
                     key={card.title}
                     onClick={() => openModal(card.title, card.content, card.materialId)}
-                    className="p-6 md:p-8 bg-neutral-cream rounded-lg border-l-4 border-primary-orange hover:shadow-xl transition-all duration-300 cursor-pointer group hover:-translate-y-1"
+                    className="p-6 md:p-8 bg-neutral-cream rounded-lg border-l-4 border-primary-orange hover:shadow-xl transition-all duration-300 cursor-pointer group hover:-translate-y-1 flex flex-col h-full"
                   >
-                    <div className="text-primary-orange group-hover:scale-110 transition-transform duration-300 mb-4">
-                      {card.icon}
+                    <div className="flex items-center gap-3 mb-2 min-w-0">
+                      <div className="text-primary-orange group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                        {card.icon}
+                      </div>
+                      <h3 className="text-lg font-serif font-semibold text-primary-brown group-hover:text-primary-orange transition-colors break-words min-w-0">
+                        {card.title}
+                      </h3>
                     </div>
-                    <h3 className="text-lg font-serif font-semibold text-primary-brown mb-2 group-hover:text-primary-orange transition-colors">
-                      {card.title}
-                    </h3>
-                    <p className="text-xs text-primary-brown/80">{card.description}</p>
+                    <p className="text-xs text-primary-brown/80 mb-3">{card.subtitle}</p>
+                    <p className="text-xs text-primary-brown/90 mb-3">{card.fullContent}</p>
+                    {card.highlight && <p className="text-xs font-medium text-primary-brown italic mb-4">{card.highlight}</p>}
+                    <p className="text-xs text-primary-orange font-medium group-hover:underline mt-auto">
+                      {card.ctaText}
+                    </p>
                   </div>
                 ))}
               </div>

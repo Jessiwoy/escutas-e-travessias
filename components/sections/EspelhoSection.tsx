@@ -12,7 +12,7 @@ export const EspelhoSection = () => {
 
   const cards = [
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-6 h-6" />,
       title: "Reconhecimento tardio",
       description: "Descobrindo-se neurodivergente na vida adulta",
       materialId: "espelho_1", // Adicionado materialId
@@ -30,7 +30,7 @@ O reconhecimento tardio não é perda de tempo. É reencontro consigo mesma.
 Você não mudou. Apenas finalmente se vê com clareza.`,
     },
     {
-      icon: <Mask className="w-8 h-8" />,
+      icon: <Mask className="w-6 h-6" />,
       title: "Mascaramento",
       description: "Compreendendo o custo de esconder quem somos",
       materialId: "espelho_2", // Adicionado materialId
@@ -49,7 +49,7 @@ Mas esse esforço tem custo. Exaustão. Burnout. Perda de si mesma.
 Reconhecer o mascaramento é o primeiro passo para parar de se esconder.`,
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: "Outras Travessias",
       description:
         "Nesta seção, compartilho histórias de profissionais que, já na vida adulta e em plena atuação clínica, descobriram em si mesmos a neurodivergência",
@@ -107,21 +107,37 @@ Essas histórias são convites para que você também se reconheça, se celebre 
             <Body>
               Só mais tarde encontrei autoras que deram nome ao que eu vivia:{" "}
               <span className="font-semibold">Steph Jones, Devon Price, Jenara Nerenberg</span> e tantas outras mulheres
-              autistas que vêm reconstruindo o olhar sobre o autismo em adultos. A minha própria experiência —
-              assombrosa e libertadora — de finalmente me reconhecer como uma pessoa autista e com TDAH me levou a
-              repensar também minha prática clínica.
+              autistas que vêm reconstruindo o olhar sobre o autismo em adultos.
             </Body>
 
             <Body>
-              Passei a buscar outros instrumentos de rastreio e avaliação, capazes de acolher as singularidades do
-              autismo e do TDAH em pessoas — especialmente mulheres — com um funcionamento aparentemente exitoso, mas
-              que vivem exaustas por sustentar o próprio mascaramento. O{" "}
-              <span className="font-semibold">Espelho-d'Água</span> nasce desse encontro entre teoria e vida, entre o
-              olhar clínico e o sentir cotidiano.
+              Steph, também psicóloga, passou anos buscando se consertar até perceber que o que havia não era falha, mas
+              autismo mascarado e não reconhecido. Sua história me tocou profundamente, porque eu também buscava
+              respostas dentro de um sistema clínico que nem sempre escuta quem sente diferente.
+            </Body>
+
+            <Quote className="my-6">"O que há de estranho em mim não é erro — é linguagem."</Quote>
+
+            <Body>
+              Durante muito tempo, os manuais e critérios da psicologia foram escritos a partir de um olhar masculino e
+              neurotípico. Por isso, tantas mulheres cresceram mascarando, tentando caber em moldes que nunca foram
+              feitos para elas. Até que o espelho se acalma — e o reflexo, enfim, se revela nítido:
+            </Body>
+
+            <Quote className="my-6">"Aqui está quem eu sempre fui."</Quote>
+
+            <Body>
+              A minha própria experiência — assombrosa e libertadora — de finalmente me reconhecer como uma pessoa
+              autista e com TDAH, e não mais apenas como alguém dentro do chamado "espectro ampliado", me levou a
+              repensar também minha prática clínica. Passei a buscar outros instrumentos de rastreio e avaliação,
+              capazes de acolher as singularidades do autismo e do TDAH em pessoas — especialmente mulheres — com um
+              funcionamento aparentemente exitoso, mas que vivem exaustas por sustentar o próprio mascaramento.
             </Body>
 
             <Body>
-              Não é sobre consertar. É sobre compreender, honrar e encontrar beleza nas formas diferentes de existir.
+              O <span className="font-semibold">Espelho-d'Água</span> nasce desse encontro entre teoria e vida, entre o
+              olhar clínico e o sentir cotidiano. Não é sobre consertar. É sobre compreender, honrar e encontrar beleza
+              nas formas diferentes de existir.
             </Body>
           </div>
 
