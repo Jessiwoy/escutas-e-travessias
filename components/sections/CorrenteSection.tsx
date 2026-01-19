@@ -165,6 +165,16 @@ export const CorrenteSection = () => {
           )}
         </div>
 
+        <div className="text-center mb-12">
+          <Body className="mb-4">
+            Cada trilha inclui práticas, rituais de cuidado e materiais personalizados — guias, diários e kits digitais
+            — criados a partir da escuta e da história de vida de cada pessoa.
+          </Body>
+          <p className="text-sm italic text-primary-brown/70">
+            "A cada travessia, o mar ensina que compreender é, também, continuar."
+          </p>
+        </div>
+
         <div className="pt-6 border-t border-primary-brown/20">
           <p className="text-xs text-primary-brown/60 text-center">
             Scheilla Soares — psicóloga e mãe atípica CRP 12/01849

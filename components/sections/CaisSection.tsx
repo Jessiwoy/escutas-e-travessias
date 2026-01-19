@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { H2, H3, Subtitle, Body } from "@/components/atoms/Typography"
+import { H2, Subtitle, Body } from "@/components/atoms/Typography"
 import { ContentModal } from "@/components/organisms/ContentModal"
 import { Waves } from "lucide-react"
 
@@ -69,7 +69,7 @@ Acesse o material de apoio e siga no seu tempo`,
     <>
       <section id="cais" className="py-16 md:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="mb-12">
             <H2 className="mb-4">O Cais</H2>
             <Subtitle>Um espaço de pausa, afeto e reconstrução</Subtitle>
           </div>
@@ -98,9 +98,9 @@ Acesse o material de apoio e siga no seu tempo`,
             </div>
           </div>
 
-          <H3 className="text-center mb-8">Travessia</H3>
+          <H2 className="mb-8">Travessia</H2>
 
-          <p className="text-sm text-primary-brown mb-8 text-center">
+          <p className="text-sm text-primary-brown mb-8">
             Cada travessia abre um pequeno porto — um texto, um guia ou um diário para acompanhar os processos de
             autocompreensão e cuidado. Você pode ler, refletir, escrever — e seguir no seu ritmo.
           </p>

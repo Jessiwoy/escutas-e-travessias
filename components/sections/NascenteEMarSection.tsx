@@ -7,7 +7,7 @@ export const NascenteEMarSection = () => {
   return (
     <section id="nascente" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <H2 className="mb-4">Entre a nascente e o mar</H2>
           <Subtitle>O encontro das águas que me ensinaram a escutar</Subtitle>
         </div>
