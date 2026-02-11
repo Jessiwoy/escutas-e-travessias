@@ -24,6 +24,13 @@ export const metadata: Metadata = {
   description:
     "Um lugar para respirar, pertencer e existir com beleza. Acolhimento para mães atípicas, mulheres neurodivergentes e infâncias neurodiversas.",
   generator: "v0.app",
+  creator: "Jessica Woytuski",
+  authors: [
+    {
+      name: "Jessica Woytuski",
+      url: "https://github.com/Jessiwoy",
+    },
+  ],
   icons: {
     icon: "/logo-semfundo.png",
     apple: "/logo-semfundo.png",
