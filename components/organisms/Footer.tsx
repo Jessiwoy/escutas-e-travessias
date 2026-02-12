@@ -21,7 +21,7 @@ export const Footer = () => {
           onClick={onClose}
         />
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 animate-in fade-in duration-200">
-          <div className="bg-white rounded-t-2xl sm:rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-hidden flex flex-col animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 sm:zoom-in duration-300">
+          <div className="bg-white rounded-t-2xl sm:rounded-xl shadow-2xl max-w-lg w-[90vw] max-h-[75vh] sm:max-h-[70vh] overflow-hidden flex flex-col animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 sm:zoom-in duration-300">
             <div className="flex items-center justify-between p-4 sm:p-5 border-b border-primary-brown/10">
               <h2 className="text-lg sm:text-xl font-serif font-semibold text-primary-brown">Termos de Uso</h2>
               <button
@@ -178,7 +178,7 @@ export const Footer = () => {
           onClick={onClose}
         />
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 animate-in fade-in duration-200">
-          <div className="bg-white rounded-t-2xl sm:rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-hidden flex flex-col animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 sm:zoom-in duration-300">
+          <div className="bg-white rounded-t-2xl sm:rounded-xl shadow-2xl max-w-lg w-[90vw] max-h-[75vh] sm:max-h-[70vh] overflow-hidden flex flex-col animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 sm:zoom-in duration-300">
             <div className="flex items-center justify-between p-4 sm:p-5 border-b border-primary-brown/10">
               <h2 className="text-lg sm:text-xl font-serif font-semibold text-primary-brown">
                 Política de Privacidade
@@ -402,8 +402,7 @@ export const Footer = () => {
   return (
     <footer className="bg-neutral-taupe border-t border-primary-brown/20" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.25fr_1fr_1fr_1fr] gap-8 lg:gap-10 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
           {/* Brand Section */}
           <div className="lg:col-span-1 animate-fade-in-up">
             <h3 className="text-lg md:text-xl font-serif font-semibold text-primary-brown mb-4">
@@ -427,7 +426,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               {[
                 { label: "Início", id: "hero" },
-                { label: "Sobre", id: "nascente" },
+                { label: "Sobre", id: "intro" },
                 { label: "Serviços", id: "corrente" },
                 { label: "Contato", id: "contato" },
               ].map((link) => (

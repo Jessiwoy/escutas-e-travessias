@@ -76,7 +76,6 @@ export function CookieConsentModal({
       description: "Você aceitou todos os cookies.",
     })
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" })
       onClose()
     }, 300)
   }
@@ -88,7 +87,6 @@ export function CookieConsentModal({
       description: "Apenas cookies necessários estão ativados.",
     })
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" })
       onClose()
     }, 300)
   }
@@ -100,13 +98,11 @@ export function CookieConsentModal({
       description: "Suas escolhas foram armazenadas.",
     })
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" })
       onClose()
     }, 300)
   }
 
   const handleClose = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
     onClose()
   }
 
@@ -119,7 +115,7 @@ export function CookieConsentModal({
       />
 
       <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 animate-in fade-in duration-200">
-        <div className="bg-white rounded-t-2xl sm:rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] sm:max-h-[85vh] overflow-hidden flex flex-col animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 sm:zoom-in duration-300">
+        <div className="bg-white rounded-t-2xl sm:rounded-xl shadow-2xl max-w-lg w-[90vw] max-h-[75vh] sm:max-h-[70vh] overflow-hidden flex flex-col animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 sm:zoom-in duration-300">
           {/* Header */}
           <div className="flex items-center justify-between p-5 border-b border-primary-brown/10">
             <h2 className="text-xl md:text-2xl font-serif font-semibold text-primary-brown pr-4 text-balance">
