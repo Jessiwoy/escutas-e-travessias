@@ -2,6 +2,9 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist } from "next/font/google"
 import { Noto_Serif_SC } from "next/font/google"
+import { Patrick_Hand } from "next/font/google"
+import { Radley } from "next/font/google"
+
 import "./globals.css"
 import { CookieProvider } from "@/components/cookies/CookieProvider"
 import { Toaster } from "@/components/ui/toaster" // Importado Toaster
@@ -16,6 +19,20 @@ const notoSerifSC = Noto_Serif_SC({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-serif",
+  display: "swap",
+})
+
+const patrickHand = Patrick_Hand({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-display",
+  display: "swap",
+})
+
+const radley = Radley({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-hero-subtitle",
   display: "swap",
 })
 
@@ -43,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${geist.variable} ${notoSerifSC.variable}`}>
+    <html lang="pt-BR" className={`${geist.variable} ${notoSerifSC.variable} ${patrickHand.variable} ${radley.variable}`}>
       <body className={`font-sans antialiased`}>
         <CookieProvider>{children}</CookieProvider>
         <Toaster /> {/* Adicionado Toaster para exibir toasts */}

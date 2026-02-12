@@ -17,23 +17,26 @@ export const HeroSection = () => {
       aria-label="Imagem principal"
     >
       <Image
-        src="/images/hero-desktop.jpg"
-        alt="Ponte ao pôr do sol - Escutas e Travessias"
+        src="/images/hero.jpg"
+        alt="Trapiche ao pôr do sol - Escutas e Travessias"
         fill
         priority
-        className="hidden md:block object-cover object-center"
+        className="object-cover object-center"
         sizes="100vw"
         quality={90}
       />
-      <Image
-        src="/images/hero-mobile.png"
-        alt="Ponte ao pôr do sol - Escutas e Travessias"
-        fill
-        priority
-        className="block md:hidden object-cover object-center"
-        sizes="100vw"
-        quality={90}
-      />
+
+      <div className="absolute inset-0 bg-black/15" />
+
+      <div className="absolute inset-x-0 top-[14%] sm:top-[18%] md:top-[21%] z-10 text-center flex flex-col items-center px-4">
+        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-white tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
+          Escutas e Travessias
+        </h1>
+        <p className="font-[family-name:var(--font-hero-subtitle)] text-sm sm:text-base md:text-lg lg:text-xl italic text-black mt-2 md:mt-3 tracking-wider drop-shadow-[0_1px_4px_rgba(0,0,0,0.25)]">
+          Neurodiversidade, Psicologia e Maternidade Atípica
+        </p>
+      </div>
+
       <button
         onClick={scrollToNext}
         className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 text-white hover:scale-125 transition-all duration-300 z-10 animate-bounce group"
