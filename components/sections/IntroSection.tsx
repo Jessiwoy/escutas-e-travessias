@@ -35,7 +35,7 @@ export const IntroSection = () => {
               <Body>
                 O <span className="font-semibold">Escutas e Travessias</span> nasceu de um instante de consciência sobre
                 o tempo — da necessidade de dar forma ao essencial antes que o depois chegasse. Sou{" "}
-                <span className="font-semibold">Scheilla Soares, psicóloga e mãe atípica.</span> Minha forma de
+                <span className="font-semibold">Scheilla Soares, psicóloga e neuropsicóloga e mestre em educação.</span> Minha forma de
                 compreender o mundo é <span className="font-semibold">neurodivergente</span> — e é dela que nasce a
                 psicologia que pratico. Escuto com o corpo, com a experiência e com a alma de quem vive as travessias
                 que acolhe.
@@ -46,7 +46,7 @@ export const IntroSection = () => {
                 atípica, percebi que minha trajetória não cabia apenas nos papéis profissionais. Durante anos, olhei
                 para fora — para meus filhos, alunos e pacientes — até reconhecer que também fazia parte do universo que
                 eu cuidava. Assumir minha neurodivergência foi o ponto de virada: deixei de me ver como alguém "com
-                traços" para compreender essas formas de ser como parte intrínseca de mim. Essa revelação me conduziu da
+                traços autistas" para compreender essas formas de ser como parte intrínseca de mim. Essa revelação me conduziu da
                 observação à vivência, da teoria à identidade.
               </Body>
 

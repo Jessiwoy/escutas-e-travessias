@@ -60,7 +60,7 @@ export const EnseadaSection = () => {
               <Quote>"Às vezes, cuidar de si é apenas aprender a respirar entre as tarefas."</Quote>
 
               <Body>
-                A <span className="font-semibold">Enseada</span> é o lugar sagrado do corpo e da pausa consciente. Um
+                A <span className="font-semibold">Enseada</span> é o lugar do corpo e da pausa consciente. Um
                 refúgio onde o tempo desacelera e você pode, enfim, ouvir sua própria respiração. O que existe aqui é
                 fruto de um <span className="font-semibold">longo aprendizado forjado na vida real</span> — de quando o
                 corpo adoeceu e eu precisei descobrir, entre uma tarefa e outra,{" "}
@@ -82,7 +82,7 @@ export const EnseadaSection = () => {
               <Body>
                 Vivemos, como descreve Byung-Chul Han, numa <span className="font-semibold">sociedade do cansaço</span> —
                 um tempo em que a produtividade e a hiperexigência substituíram o respirar. E é justamente por isso que
-                o que aprendi serve para todos: porque todos, em algum momento, precisam reencontrar o corpo e o ritmo
+                o que aprendi serve para todos: porque todos, em algum momento, precisamos reencontrar o corpo e o ritmo
                 da própria alma.
               </Body>
 
