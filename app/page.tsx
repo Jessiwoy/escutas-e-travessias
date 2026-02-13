@@ -8,7 +8,7 @@ import { CaisSection } from "@/components/sections/CaisSection"
 import { PraiaSection } from "@/components/sections/PraiaSection"
 import { CartasSection } from "@/components/sections/CartasSection"
 import { NascenteEMarSection } from "@/components/sections/NascenteEMarSection"
-import { CorrenteSection } from "@/components/sections/CorrenteSection"
+import { CorrentezaSection } from "@/components/sections/CorrentezaSection"
 import { TravessiaSection } from "@/components/sections/TravessiaSection"
 import { ContatoSection } from "@/components/sections/ContatoSection"
 import { WaveDivider } from "@/components/atoms/WaveDivider"
@@ -22,11 +22,11 @@ export default function Home() {
       <EnseadaSection />
       <WaveDivider color="#F2CCB6" />
       <EspelhoSection />
+      <CorrentezaSection />
       <CaisSection />
       <PraiaSection />
       <CartasSection />
       <NascenteEMarSection />
-      <CorrenteSection />
       <TravessiaSection />
       <ContatoSection />
       <Footer />

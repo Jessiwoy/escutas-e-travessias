@@ -11,7 +11,7 @@ export const Navbar = () => {
   const navLinks = [
     { label: "Início", id: "hero" },
     { label: "Sobre", id: "nascente" },
-    { label: "Serviços", id: "corrente" },
+    { label: "Serviços", id: "correnteza" },
     { label: "Contato", id: "contato" },
   ]
 

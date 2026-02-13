@@ -4,7 +4,7 @@ import { Leaf, Zap, MessageCircle, Shield, Headphones, Clock, Smile } from "luci
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver"
 import { useEffect, useState } from "react"
 
-export const CorrenteSection = () => {
+export const CorrentezaSection = () => {
   const { ref: sectionRef, hasIntersected } = useIntersectionObserver({ threshold: 0.2 })
   const [animatedBullets, setAnimatedBullets] = useState<boolean[]>([])
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
@@ -61,10 +61,10 @@ export const CorrenteSection = () => {
   ]
 
   return (
-    <section id="corrente" className="py-16 md:py-24 bg-neutral-cream" ref={sectionRef}>
+    <section id="correnteza" className="py-16 md:py-24 bg-neutral-cream" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="mb-12">
-          <H2 className="mb-4">A Corrente</H2>
+          <H2 className="mb-4">Correnteza</H2>
           <Subtitle>Avaliação neurofuncional e mentorias</Subtitle>
 
           <div className="bg-primary-gold/10 rounded-lg p-6 border-l-4 border-primary-gold mt-8 mb-8">
@@ -75,7 +75,7 @@ export const CorrenteSection = () => {
 
           <div className="mt-8 mb-12">
             <Body className="mb-4">
-              A Corrente é o espaço da escuta clínica — onde ciência e sensibilidade se encontram para compreender o
+              Correnteza é o espaço da escuta clínica — onde ciência e sensibilidade se encontram para compreender o
               funcionamento cognitivo, emocional e sensorial de cada pessoa. É aqui que o mar ganha direção.
             </Body>
             <Body className="mb-4">
@@ -83,7 +83,7 @@ export const CorrenteSection = () => {
               de cuidado e reconciliação, não apenas um processo técnico. Avaliar é escutar o modo como a mente respira.
             </Body>
             <Body className="mb-4">
-              A <span className="font-bold">avaliação neurofuncional</span> nasce dessa visão: um processo que une os
+              A <span className="font-bold">avaliação neuropsicológica</span> nasce dessa visão: um processo que une os
               fundamentos da neuropsicologia à escuta viva da experiência. Mais do que medir, ela busca compreender o
               que sustenta e o que sobrecarrega — especialmente em mulheres e adultos neurodivergentes que, por anos,
               aprenderam a mascarar o próprio funcionamento.

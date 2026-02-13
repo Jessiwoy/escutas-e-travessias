@@ -427,7 +427,7 @@ export const Footer = () => {
               {[
                 { label: "Início", id: "hero" },
                 { label: "Sobre", id: "intro" },
-                { label: "Serviços", id: "corrente" },
+                { label: "Serviços", id: "correnteza" },
                 { label: "Contato", id: "contato" },
               ].map((link) => (
                 <li key={link.id}>
