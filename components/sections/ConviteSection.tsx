@@ -2,14 +2,14 @@ import Image from "next/image"
 import { H2, Body } from "@/components/atoms/Typography"
 import { Instagram, Mail, FileText } from "lucide-react"
 
-export const TravessiaSection = () => {
+export const ConviteSection = () => {
   return (
     <section id="convite" className="py-16 md:py-24 bg-neutral-cream">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="grid md:grid-cols-2 gap-12 items-start mb-8">
           <div className="relative h-[300px] md:h-full md:min-h-[550px] rounded-lg overflow-hidden shadow-lg order-1 md:order-1">
             <Image
-              src="/images/travessia-farol.png"
+              src="/images/convite-farol.png"
               alt="Farol iluminado em uma colina com caminho de pedras"
               fill
               className="object-cover"

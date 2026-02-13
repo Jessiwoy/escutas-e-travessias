@@ -9,7 +9,7 @@ import { PraiaSection } from "@/components/sections/PraiaSection"
 import { CartasSection } from "@/components/sections/CartasSection"
 import { NascenteEMarSection } from "@/components/sections/NascenteEMarSection"
 import { CorrentezaSection } from "@/components/sections/CorrentezaSection"
-import { TravessiaSection } from "@/components/sections/TravessiaSection"
+import { ConviteSection } from "@/components/sections/ConviteSection"
 import { ContatoSection } from "@/components/sections/ContatoSection"
 import { WaveDivider } from "@/components/atoms/WaveDivider"
 
@@ -27,7 +27,7 @@ export default function Home() {
       <PraiaSection />
       <CartasSection />
       <NascenteEMarSection />
-      <TravessiaSection />
+      <ConviteSection />
       <ContatoSection />
       <Footer />
     </main>
