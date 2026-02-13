@@ -155,7 +155,7 @@ Essas histórias são convites para que você também se reconheça, se celebre 
 
           <div className="pt-6 border-t border-primary-brown/20">
             <p className="text-xs text-primary-brown/60 text-center">
-              Scheilla Soares — psicóloga e mãe atípica CRP 12/01849
+              Scheilla Soares — psicóloga e neuropsicóloga CRP 12/01849
               <br />
               Escutas e Travessias — Psicologia e neurodiversidade
             </p>

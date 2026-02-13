@@ -480,7 +480,7 @@ export const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contato@escutasetravessias.com"
+                href="mailto:escutasetravessias@gmail.com"
                 className="w-10 h-10 rounded-full bg-primary-brown/20 flex items-center justify-center text-primary-brown hover:bg-primary-orange hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110"
                 aria-label="Email"
                 title="Email"
@@ -494,7 +494,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-brown/20 pt-6 md:pt-8 text-center space-y-2 animate-fade-in-up">
           <p className="text-sm md:text-base text-primary-brown/80">
-            Scheilla Soares - CRP 12/01849 - Psicologia e neurodiversidade
+            Scheilla Soares - Psicologa e neuropsicóloga - CRP 12/01849 
           </p>
           <p className="text-xs text-primary-brown/90">
             © {new Date().getFullYear()} Escutas e Travessias. Todos os direitos reservados.
