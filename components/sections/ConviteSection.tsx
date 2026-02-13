@@ -99,16 +99,18 @@ export const ConviteSection = () => {
               <span>Instagram</span>
             </a>
             <a
-              href="https://escutasetravessia.substack.com"
+              href="https://medium.com/@scheillasoares"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-primary-brown text-white rounded-lg hover:scale-105 transition-transform duration-200"
             >
               <FileText className="w-5 h-5" />
-              <span>Substack</span>
+              <span>Medium</span>
             </a>
             <a
-              href="#contato"
+              href="mailto:escutasetravessias@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-neutral-taupe text-primary-brown rounded-lg hover:bg-primary-brown hover:text-white transition-colors duration-200"
             >
               <Mail className="w-5 h-5" />

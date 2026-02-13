@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Instagram, Mail, X } from "lucide-react"
+import { Instagram, Mail, X, Bookmark } from "lucide-react"
 
 export const Footer = () => {
   const [openModal, setOpenModal] = useState<string | null>(null)
@@ -158,8 +158,8 @@ export const Footer = () => {
 
               <h3 className="font-semibold text-primary-brown text-sm sm:text-base pt-2">Seção 9 – Contato</h3>
               <p>Caso você tenha qualquer dúvida sobre os Termos de Uso, entre em contato pelo e-mail:</p>
-              <a href="mailto:scheilla.soares@gmail.com" className="text-primary-orange hover:underline">
-                scheilla.soares@gmail.com
+              <a href="mailto:escutasetravessias@gmail.com" className="text-primary-orange hover:underline">
+                escutasetravessias@gmail.com
               </a>
             </div>
           </div>
@@ -389,8 +389,8 @@ export const Footer = () => {
                 Seção 13 – Encarregado pelo Tratamento de Dados (DPO)
               </h3>
               <p>Para dúvidas ou solicitações sobre dados pessoais, contate:</p>
-              <a href="mailto:scheilla.soares@gmail.com" className="text-primary-orange hover:underline">
-                scheilla.soares@gmail.com
+              <a href="mailto:escutasetravessias@gmail.com" className="text-primary-orange hover:underline">
+                escutasetravessias@gmail.com
               </a>
             </div>
           </div>
@@ -411,11 +411,11 @@ export const Footer = () => {
             <p className="text-sm text-primary-brown/90 mb-4">Psicologia e neurodiversidade</p>
             <div className="space-y-3">
               <a
-                href="mailto:contato@escutasetravessias.com"
+                href="mailto:escutasetravessias@gmail.com"
                 className="flex items-center gap-2 text-sm text-primary-brown hover:text-primary-orange transition-colors duration-200 group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span>contato@escutasetravessias.com</span>
+                <span>escutasetravessias@gmail.com</span>
               </a>
             </div>
           </div>
@@ -426,8 +426,8 @@ export const Footer = () => {
             <ul className="space-y-2">
               {[
                 { label: "Início", id: "hero" },
-                { label: "Sobre", id: "intro" },
                 { label: "Serviços", id: "correnteza" },
+                { label: "Sobre", id: "intro" },
                 { label: "Contato", id: "contato" },
               ].map((link) => (
                 <li key={link.id}>
@@ -487,6 +487,26 @@ export const Footer = () => {
               >
                 <Mail className="w-5 h-5" />
               </a>
+              <a
+                href="https://medium.com/@scheillasoares"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary-brown/20 flex items-center justify-center text-primary-brown hover:bg-primary-orange hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110"
+                aria-label="Medium"
+                title="Medium"
+              >
+                <span className="text-lg font-black leading-none font-serif">M</span>
+              </a>
+              <a
+                href="https://escutasetravessia.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary-brown/20 flex items-center justify-center text-primary-brown hover:bg-primary-orange hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110"
+                aria-label="Substack"
+                title="Substack"
+              >
+                <Bookmark className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -494,7 +514,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-brown/20 pt-6 md:pt-8 text-center space-y-2 animate-fade-in-up">
           <p className="text-sm md:text-base text-primary-brown/80">
-            Scheilla Soares - Psicologa e neuropsicóloga - CRP 12/01849 
+            Scheilla Soares - CRP 12/01849 - Psicologia e neurodiversidade
           </p>
           <p className="text-xs text-primary-brown/90">
             © {new Date().getFullYear()} Escutas e Travessias. Todos os direitos reservados.
