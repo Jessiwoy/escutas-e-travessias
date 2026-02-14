@@ -50,11 +50,11 @@ Reconhecer o mascaramento é o primeiro passo para parar de se esconder.`,
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Outras Travessias",
+      title: "Depois do diagnóstico",
       description:
         "Nesta seção, compartilho histórias de profissionais que, já na vida adulta e em plena atuação clínica, descobriram em si mesmos a neurodivergência",
       materialId: "espelho_3", // Adicionado materialId
-      content: `Outras Travessias
+      content: `Depois do diagnóstico
 
 Nesta seção, compartilho histórias de profissionais que, já na vida adulta e em plena atuação clínica, descobriram em si mesmos a neurodivergência.
 

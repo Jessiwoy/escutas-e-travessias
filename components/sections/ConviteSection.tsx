@@ -9,7 +9,7 @@ export const ConviteSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start mb-8">
           <div className="relative h-[300px] md:h-full md:min-h-[550px] rounded-lg overflow-hidden shadow-lg order-1 md:order-1">
             <Image
-              src="/images/travessia-farol.png"
+              src="/images/convite-farol.png"
               alt="Farol iluminado em uma colina com caminho de pedras"
               fill
               className="object-cover"
