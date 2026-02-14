@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { H2, Subtitle } from "@/components/atoms/Typography"
+import { H2 } from "@/components/atoms/Typography"
 import { Button } from "@/components/atoms/Button"
 import { Check, Loader2, AlertCircle } from "lucide-react"
 import { formatPhoneNumber } from "@/lib/formatPhone"
@@ -121,20 +121,13 @@ export const ContatoSection = () => {
       id="contato"
       className="py-12 md:py-20 bg-gradient-to-br from-primary-orange/10 via-neutral-cream/50 to-primary-gold/10"
     >
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="text-center mb-10 md:mb-14 animate-fade-in-up">
           <H2 className="mb-3 md:mb-4">Entre em contato</H2>
-          <Subtitle>Aqui, você encontra um espaço seguro. Entre em contato agora mesmo.</Subtitle>
+          <p className="text-lg text-primary-orange font-serif italic mt-4">Aqui, voce encontra um espaco seguro para ser ouvida. Escolha o assunto, escreva sua mensagem pelo formulario abaixo e eu retornarei com carinho.</p>
         </div>
 
-        <div className="bg-neutral-cream/40 backdrop-blur-sm border-l-4 border-primary-orange rounded-lg p-4 md:p-6 mb-8 animate-fade-in-up shadow-sm">
-          <p className="text-sm md:text-base text-primary-brown/90 italic leading-relaxed">
-            Atualmente estou atendendo por lista de espera. Se desejar, envie sua mensagem e retornarei assim que houver
-            disponibilidade.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-xl p-5 md:p-7 animate-fade-in-up max-w-2xl mx-auto">
+        <div className="bg-white rounded-xl shadow-xl p-4 md:p-6 animate-fade-in-up max-w-xl mx-auto">
           {formStatus === "success" && (
             <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3 animate-in slide-in-from-top duration-300">
               <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -268,7 +261,7 @@ export const ContatoSection = () => {
                 id="message"
                 name="message"
                 required
-                rows={5}
+                rows={3}
                 value={formData.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
