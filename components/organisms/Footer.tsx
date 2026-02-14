@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Instagram, Mail, X, Bookmark } from "lucide-react"
+import { Instagram, Youtube, Mail, X, Bookmark } from "lucide-react"
 
 export const Footer = () => {
   const [openModal, setOpenModal] = useState<string | null>(null)
@@ -478,6 +478,16 @@ export const Footer = () => {
                 title="Instagram"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@escutasetravessias"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-primary-brown/20 flex items-center justify-center text-primary-brown hover:bg-primary-orange hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110"
+                aria-label="YouTube"
+                title="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
               </a>
               <a
                 href="mailto:escutasetravessias@gmail.com"

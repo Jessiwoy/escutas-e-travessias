@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { H2, Body } from "@/components/atoms/Typography"
-import { Instagram, Mail, FileText } from "lucide-react"
+import { Instagram, Youtube, Mail, FileText } from "lucide-react"
 
 export const ConviteSection = () => {
   return (
@@ -9,7 +9,7 @@ export const ConviteSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start mb-8">
           <div className="relative h-[300px] md:h-full md:min-h-[550px] rounded-lg overflow-hidden shadow-lg order-1 md:order-1">
             <Image
-              src="/images/convite-farol.png"
+              src="/images/travessia-farol.png"
               alt="Farol iluminado em uma colina com caminho de pedras"
               fill
               className="object-cover"
@@ -99,18 +99,25 @@ export const ConviteSection = () => {
               <span>Instagram</span>
             </a>
             <a
-              href="https://medium.com/@scheillasoares"
+              href="https://www.youtube.com/@escutasetravessias"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-primary-brown text-white rounded-lg hover:scale-105 transition-transform duration-200"
+            >
+              <Youtube className="w-5 h-5" />
+              <span>YouTube</span>
+            </a>
+            <a
+              href="https://medium.com/@scheillasoares"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-gold text-primary-brown rounded-lg hover:scale-105 transition-transform duration-200"
             >
               <FileText className="w-5 h-5" />
               <span>Medium</span>
             </a>
             <a
-              href="mailto:escutasetravessias@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contato"
               className="flex items-center gap-2 px-4 py-2 bg-neutral-taupe text-primary-brown rounded-lg hover:bg-primary-brown hover:text-white transition-colors duration-200"
             >
               <Mail className="w-5 h-5" />
