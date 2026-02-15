@@ -1,3 +1,5 @@
+
+
 "use client"
 
 import { useState } from "react"
@@ -90,12 +92,6 @@ Acesse o material de apoio e siga no seu tempo`,
               porto, e você escolhe por onde começar.
             </Body>
 
-            <div className="bg-primary-gold/10 rounded-lg p-4 border-l-4 border-primary-gold">
-              <p className="text-sm italic text-primary-brown">
-                Ao final de cada material, há um convite discreto para quem desejar seguir mais fundo — um espaço de
-                continuação e escuta individual, disponível se e quando fizer sentido pra você.
-              </p>
-            </div>
           </div>
 
           <H2 className="mb-8">Travessia</H2>
@@ -133,7 +129,7 @@ Acesse o material de apoio e siga no seu tempo`,
 
           <div className="pt-6 border-t border-primary-brown/20">
             <p className="text-xs text-primary-brown/60 text-center">
-              Scheilla Soares — psicóloga e neuropsicóloga CRP 12/01849
+              Scheilla Soares — psicóloga e mãe atípica CRP 12/01849
               <br />
               Escutas e Travessias — Psicologia e neurodiversidade
             </p>

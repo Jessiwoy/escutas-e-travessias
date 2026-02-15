@@ -121,21 +121,20 @@ export const ContentModal = ({ isOpen, onClose, title, content, materialId }: Co
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
 
       {/* Modal */}
-      <div className="relative bg-white/95 rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white/95 rounded-xl shadow-2xl max-w-md w-[90vw] max-h-[75vh] sm:max-h-[70vh] overflow-y-auto">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-primary-brown hover:text-primary-orange transition-colors"
+          className="absolute top-3 right-3 text-primary-brown hover:text-primary-orange transition-colors"
           aria-label="Fechar"
         >
-          <X className="w-6 h-6" />
+          <X className="w-5 h-5" />
         </button>
 
-        <div className="p-8">
-          <h2 className="text-3xl font-serif font-semibold text-primary-brown mb-6">{title}</h2>
+        <div className="p-5 sm:p-6">
+          <h2 className="text-xl sm:text-2xl font-serif font-semibold text-primary-brown mb-4">{title}</h2>
 
-          <p className="text-primary-brown/80 mb-6 leading-relaxed">
-            Para acessar este conteúdo, deixe seu email. Você receberá materiais e atualizações diretamente no seu
-            coração.
+          <p className="text-sm text-primary-brown/80 mb-4 leading-relaxed">
+            Receba este material diretamente no seu e-mail e explore o conteúdo no seu tempo.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -151,7 +150,7 @@ export const ContentModal = ({ isOpen, onClose, title, content, materialId }: Co
             />
 
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-primary-brown mb-2">
+              <label htmlFor="name" className="block text-xs font-medium text-primary-brown mb-1">
                 Nome
               </label>
               <input
@@ -161,13 +160,13 @@ export const ContentModal = ({ isOpen, onClose, title, content, materialId }: Co
                 onChange={(e) => setName(e.target.value)}
                 required
                 disabled={isLoading}
-                className="w-full px-4 py-3 border border-primary-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-white disabled:opacity-50"
+                className="w-full px-3 py-2 text-sm border border-primary-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-white disabled:opacity-50"
                 placeholder="Seu nome"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-primary-brown mb-2">
+              <label htmlFor="email" className="block text-xs font-medium text-primary-brown mb-1">
                 Email
               </label>
               <input
@@ -177,7 +176,7 @@ export const ContentModal = ({ isOpen, onClose, title, content, materialId }: Co
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={isLoading}
-                className="w-full px-4 py-3 border border-primary-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-white disabled:opacity-50"
+                className="w-full px-3 py-2 text-sm border border-primary-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange bg-white disabled:opacity-50"
                 placeholder="seu@email.com"
               />
             </div>

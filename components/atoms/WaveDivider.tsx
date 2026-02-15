@@ -5,12 +5,12 @@ interface WaveDividerProps {
 
 export const WaveDivider = ({ color = "#BFADA8", flip = false }: WaveDividerProps) => {
   return (
-    <div className={`relative w-full ${flip ? "rotate-180" : ""}`}>
+    <div className={`relative w-full leading-none ${flip ? "rotate-180" : ""}`} style={{ marginTop: "-1px", marginBottom: "-1px" }}>
       <svg
         viewBox="0 0 1440 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto"
+        className="block w-full h-auto"
         preserveAspectRatio="none"
       >
         <path
