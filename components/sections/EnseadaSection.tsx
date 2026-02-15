@@ -60,7 +60,7 @@ export const EnseadaSection = () => {
               <Quote>"Às vezes, cuidar de si é apenas aprender a respirar entre as tarefas."</Quote>
 
               <Body>
-                A <span className="font-semibold">Enseada</span> é o lugar do corpo e da pausa consciente. Um
+                A <span className="font-semibold">Enseada</span> é o lugar sagrado do corpo e da pausa consciente. Um
                 refúgio onde o tempo desacelera e você pode, enfim, ouvir sua própria respiração. O que existe aqui é
                 fruto de um <span className="font-semibold">longo aprendizado forjado na vida real</span> — de quando o
                 corpo adoeceu e eu precisei descobrir, entre uma tarefa e outra,{" "}
@@ -82,7 +82,7 @@ export const EnseadaSection = () => {
               <Body>
                 Vivemos, como descreve Byung-Chul Han, numa <span className="font-semibold">sociedade do cansaço</span> —
                 um tempo em que a produtividade e a hiperexigência substituíram o respirar. E é justamente por isso que
-                o que aprendi serve para todos: porque todos, em algum momento, precisamos reencontrar o corpo e o ritmo
+                o que aprendi serve para todos: porque todos, em algum momento, precisam reencontrar o corpo e o ritmo
                 da própria alma.
               </Body>
 
@@ -136,16 +136,14 @@ export const EnseadaSection = () => {
                 <p className="text-sm text-primary-brown/80 mb-3">{card.description}</p>
                 <p className="text-sm text-primary-brown/90 mb-3">{card.fullContent}</p>
                 <p className="text-sm font-medium text-primary-brown mb-4">{card.highlight}</p>
-                <p className="text-sm text-primary-orange font-medium group-hover:underline mt-auto">
-                  {card.ctaText}
-                </p>
+
               </div>
             ))}
           </div>
 
           <div className="pt-8 border-t border-primary-brown/20 mt-8">
             <p className="text-xs text-primary-brown/60 text-center">
-              Scheilla Soares — psicóloga e neuropsicóloga CRP 12/01849
+              Scheilla Soares — psicóloga e mãe atípica CRP 12/01849
               <br />
               Escutas e Travessias — Psicologia e neurodiversidade
             </p>

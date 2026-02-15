@@ -158,7 +158,7 @@ export const Footer = () => {
 
               <h3 className="font-semibold text-primary-brown text-sm sm:text-base pt-2">Seção 9 – Contato</h3>
               <p>Caso você tenha qualquer dúvida sobre os Termos de Uso, entre em contato pelo e-mail:</p>
-              <a href="mailto:escutasetravessias@gmail.com" className="text-primary-orange hover:underline">
+              <a href="mailto:escutasetravessias@gmail.com" target="_blank" rel="noopener noreferrer" className="text-primary-orange hover:underline">
                 escutasetravessias@gmail.com
               </a>
             </div>
@@ -389,7 +389,7 @@ export const Footer = () => {
                 Seção 13 – Encarregado pelo Tratamento de Dados (DPO)
               </h3>
               <p>Para dúvidas ou solicitações sobre dados pessoais, contate:</p>
-              <a href="mailto:escutasetravessias@gmail.com" className="text-primary-orange hover:underline">
+              <a href="mailto:escutasetravessias@gmail.com" target="_blank" rel="noopener noreferrer" className="text-primary-orange hover:underline">
                 escutasetravessias@gmail.com
               </a>
             </div>

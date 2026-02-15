@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { H2, Body } from "@/components/atoms/Typography"
-import { Instagram, Youtube, Mail, FileText } from "lucide-react"
+import { Instagram, Youtube, FileText } from "lucide-react"
 
 export const ConviteSection = () => {
   return (
@@ -111,17 +111,10 @@ export const ConviteSection = () => {
               href="https://medium.com/@scheillasoares"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-primary-gold text-primary-brown rounded-lg hover:scale-105 transition-transform duration-200"
+              className="flex items-center gap-2 px-4 py-2 bg-neutral-taupe text-primary-brown rounded-lg hover:scale-105 transition-transform duration-200"
             >
               <FileText className="w-5 h-5" />
               <span>Medium</span>
-            </a>
-            <a
-              href="#contato"
-              className="flex items-center gap-2 px-4 py-2 bg-neutral-taupe text-primary-brown rounded-lg hover:bg-primary-brown hover:text-white transition-colors duration-200"
-            >
-              <Mail className="w-5 h-5" />
-              <span>Contato</span>
             </a>
           </div>
         </div>

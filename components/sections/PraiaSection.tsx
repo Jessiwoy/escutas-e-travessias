@@ -97,9 +97,7 @@ Explorar materiais para mães`,
                     <p className="text-xs text-primary-brown/80 mb-3">{card.subtitle}</p>
                     <p className="text-xs text-primary-brown/90 mb-3">{card.fullContent}</p>
                     {card.highlight && <p className="text-xs font-medium text-primary-brown italic mb-4">{card.highlight}</p>}
-                    <p className="text-xs text-primary-orange font-medium group-hover:underline mt-auto">
-                      {card.ctaText}
-                    </p>
+
                   </div>
                 ))}
               </div>
@@ -108,7 +106,7 @@ Explorar materiais para mães`,
 
           <div className="pt-6 border-t border-primary-brown/20 mt-12">
             <p className="text-xs text-primary-brown/60 text-center">
-              Scheilla Soares — psicóloga e neuropsicóloga CRP 12/01849
+              Scheilla Soares — psicóloga e mãe atípica CRP 12/01849
               <br />
               Escutas e Travessias — Psicologia e neurodiversidade
             </p>

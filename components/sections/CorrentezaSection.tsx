@@ -65,7 +65,7 @@ export const CorrentezaSection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="mb-12">
           <H2 className="mb-4">Correnteza</H2>
-          <Subtitle>Avaliação neurofuncional e mentorias</Subtitle>
+          <Subtitle>Avaliação neuropsicológica e mentorias</Subtitle>
 
           <div className="bg-primary-gold/10 rounded-lg p-6 border-l-4 border-primary-gold mt-8 mb-8">
             <p className="text-sm italic text-primary-brown">
@@ -177,7 +177,7 @@ export const CorrentezaSection = () => {
 
         <div className="pt-6 border-t border-primary-brown/20">
           <p className="text-xs text-primary-brown/60 text-center">
-            Scheilla Soares — psicóloga e neuropsicóloga CRP 12/01849
+            Scheilla Soares — psicóloga e mãe atípica CRP 12/01849
             <br />
             Escutas e Travessias — Psicologia e neurodiversidade
           </p>
