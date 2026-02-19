@@ -57,7 +57,7 @@ export const Navbar = () => {
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
                 className={cn(
-                  "font-sans md:text-base transition-all duration-150 relative",
+                  "font-sans md:text-base transition-all duration-150 relative cursor-pointer",
                   "text-white drop-shadow-lg pb-1",
                   activeSection === link.id ? "text-primary-brown font-semibold" : "hover:text-primary-brown",
                 )}
@@ -76,7 +76,7 @@ export const Navbar = () => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-150 relative z-50"
+            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-150 relative z-50 cursor-pointer"
             aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -116,7 +116,7 @@ export const Navbar = () => {
                   onClick={() => scrollToSection(link.id)}
                   className={cn(
                     "block w-full text-left px-6 py-3 transition-colors duration-150",
-                    "font-sans text-sm border-b border-white/10",
+                    "font-sans text-sm border-b border-white/10 cursor-pointer",
                     activeSection === link.id ? "bg-white/20 text-white font-semibold" : "text-white hover:bg-white/10",
                   )}
                   aria-current={activeSection === link.id ? "page" : undefined}

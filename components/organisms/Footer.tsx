@@ -433,9 +433,9 @@ export const Footer = () => {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-sm text-primary-brown hover:text-primary-orange hover:translate-x-1 transition-all duration-200"
-                  >
-                    {link.label}
+                        className="text-sm text-primary-brown hover:text-primary-orange hover:translate-x-1 transition-all duration-200 cursor-pointer"
+                      >
+                        {link.label}
                   </button>
                 </li>
               ))}
@@ -448,16 +448,16 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => setOpenModal("Termos de Uso")}
-                  className="text-sm text-primary-brown hover:text-primary-orange hover:translate-x-1 transition-all duration-200"
+                    onClick={() => setOpenModal("Termos de Uso")}
+                    className="text-sm text-primary-brown hover:text-primary-orange hover:translate-x-1 transition-all duration-200 cursor-pointer"
                 >
                   Termos de uso
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => setOpenModal("Política de Privacidade")}
-                  className="text-sm text-primary-brown hover:text-primary-orange hover:translate-x-1 transition-all duration-200"
+                    onClick={() => setOpenModal("Política de Privacidade")}
+                    className="text-sm text-primary-brown hover:text-primary-orange hover:translate-x-1 transition-all duration-200 cursor-pointer"
                 >
                   Política de privacidade
                 </button>
@@ -524,7 +524,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-brown/20 pt-6 md:pt-8 text-center space-y-2 animate-fade-in-up">
           <p className="text-sm md:text-base text-primary-brown/80">
-            Scheilla Soares - CRP 12/01849 - Psicologia e neurodiversidade
+              Scheilla Soares - Psicologia e neurodiversidade - CRP 12/01849
           </p>
           <p className="text-xs text-primary-brown/90">
             © {new Date().getFullYear()} Escutas e Travessias. Todos os direitos reservados.
