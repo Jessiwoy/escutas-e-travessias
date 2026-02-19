@@ -11,7 +11,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "px-6 py-3 rounded-lg font-sans font-medium transition-all duration-200",
+          "px-6 py-3 rounded-lg font-sans font-medium transition-all duration-200 cursor-pointer",
           "focus:outline-none focus:ring-2 focus:ring-primary-orange focus:ring-offset-2",
           "shadow-md hover:shadow-lg",
           {

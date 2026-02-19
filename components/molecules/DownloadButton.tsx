@@ -17,7 +17,7 @@ export const DownloadButton = ({ materialName, onDownload }: DownloadButtonProps
   return (
     <button
       onClick={handleClick}
-      className="inline-flex items-center gap-2 text-primary-orange hover:text-primary-brown transition-colors duration-200"
+      className="inline-flex items-center gap-2 text-primary-orange hover:text-primary-brown transition-colors duration-200 cursor-pointer"
       aria-label={`Baixar ${materialName}`}
     >
       <Download className="w-5 h-5" />
