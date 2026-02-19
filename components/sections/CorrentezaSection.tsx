@@ -1,8 +1,8 @@
 "use client"
 import { H2, Subtitle, Body } from "@/components/atoms/Typography"
-import { Leaf, Zap, MessageCircle, Shield, Headphones, Clock, Smile, Icon } from "lucide-react"
+import { Leaf, Zap, MessageCircle, Shield, Headphones, Clock, Smile, LucideIcon } from "lucide-react"
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver"
-import { useEffect, useState, FC } from "react"
+import { useEffect, useState, FC, RefObject } from "react"
 
 const APROFUNDAMENTOS_ITEMS = [
   {
@@ -28,7 +28,7 @@ const APROFUNDAMENTOS_ITEMS = [
 ]
 
 interface AnimatedListItemProps {
-  item: { text: string; icon: Icon }
+  item: { text: string; icon: LucideIcon }
   isVisible: boolean
   isDesktop: boolean
 }
@@ -159,7 +159,7 @@ export const CorrentezaSection = () => {
           {modalities.map((mod, cardIndex) => (
             <div
               key={mod.title}
-              ref={cardIndex === 1 ? flagsRef : undefined}
+              ref={cardIndex === 1 ? (flagsRef as RefObject<HTMLDivElement>) : undefined}
               className={`relative p-6 bg-white rounded-lg border-l-4 border-primary-orange hover:shadow-lg transition-shadow duration-300 flex flex-col h-full min-w-0 ${
                 cardIndex === 1 ? "lg:pr-12" : ""
               }`}
