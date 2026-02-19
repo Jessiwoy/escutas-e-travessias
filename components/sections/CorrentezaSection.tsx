@@ -1,40 +1,108 @@
 "use client"
 import { H2, Subtitle, Body } from "@/components/atoms/Typography"
-import { Leaf, Zap, MessageCircle, Shield, Headphones, Clock, Smile } from "lucide-react"
+import { Leaf, Zap, MessageCircle, Shield, Headphones, Clock, Smile, Icon } from "lucide-react"
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver"
-import { useEffect, useState } from "react"
+import { useEffect, useState, FC } from "react"
+
+const APROFUNDAMENTOS_ITEMS = [
+  {
+    text: "Travessia da Comunicação e Conexão — relações, linguagem e energia social.",
+    icon: MessageCircle,
+  },
+  {
+    text: "Travessia da Previsibilidade e Rotina — estrutura, transições e segurança.",
+    icon: Shield,
+  },
+  {
+    text: "Travessia da Sensação e Sobrecarga — equilíbrio sensorial e autorregulação.",
+    icon: Headphones,
+  },
+  {
+    text: "Travessia do Tempo e da Atenção — ritmo, foco e prazer nas tarefas.",
+    icon: Clock,
+  },
+  {
+    text: "Travessia da Emoção e Impulsividade — regulação afetiva e expressão simbólica.",
+    icon: Smile,
+  },
+]
+
+interface AnimatedListItemProps {
+  item: { text: string; icon: Icon }
+  isVisible: boolean
+  isDesktop: boolean
+}
+
+const AnimatedListItem: FC<AnimatedListItemProps> = ({ item, isVisible, isDesktop }) => {
+  const IconComponent = item.icon
+  const desktopClasses = "lg:w-[360px] lg:max-w-none lg:-ml-16 lg:z-10 pl-6 pr-3"
+  const mobileClasses = "px-3 py-2"
+
+  const commonWrapperClasses = `transition-all duration-500 ${
+    isVisible ? "opacity-100 translate-y-0 translate-x-0" : "opacity-0"
+  } ${isDesktop ? "translate-x-2" : "translate-y-2"}`
+
+  const commonInnerClasses =
+    "bg-white/50 backdrop-blur-sm rounded-full border border-primary-orange/20 flex items-center gap-2 shadow-sm hover:shadow-md active:shadow-md transition-all duration-200 ease-out hover:border-primary-orange/35 active:border-primary-orange/35 hover:-translate-y-[1px] active:-translate-y-[1px] focus-visible:ring-2 ring-primary-orange/30 relative min-w-0"
+
+  return (
+    <div className={commonWrapperClasses}>
+      <div className={`${commonInnerClasses} ${isDesktop ? desktopClasses : mobileClasses}`}>
+        {IconComponent && (
+          <div className={`flex-shrink-0 ${isDesktop ? "absolute left-1 top-1/2 -translate-y-1/2 -translate-x-1" : ""}`}>
+            <IconComponent className="w-4 h-4 text-primary-orange" />
+          </div>
+        )}
+        <p className="text-xs text-primary-brown/80 whitespace-normal break-words">{item.text}</p>
+      </div>
+    </div>
+  )
+}
 
 export const CorrentezaSection = () => {
-  const { ref: sectionRef, hasIntersected } = useIntersectionObserver({ threshold: 0.2 })
-  const [animatedBullets, setAnimatedBullets] = useState<boolean[]>([])
+  const { ref: flagsRef, hasIntersected: flagsVisible } = useIntersectionObserver({ threshold: 0.3 })
+  const [animatedBullets, setAnimatedBullets] = useState<boolean[]>(Array(APROFUNDAMENTOS_ITEMS.length).fill(false))
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
   useEffect(() => {
-    // Check for prefers-reduced-motion
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
     setPrefersReducedMotion(mediaQuery.matches)
 
-    const bulletCount = 5
-    if (hasIntersected && !prefersReducedMotion) {
+    const handleChange = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
+    mediaQuery.addEventListener("change", handleChange)
+    return () => mediaQuery.removeEventListener("change", handleChange)
+  }, [])
+
+  useEffect(() => {
+    const bulletCount = APROFUNDAMENTOS_ITEMS.length
+    const timeouts: ReturnType<typeof setTimeout>[] = []
+
+    if (flagsVisible) {
+      if (prefersReducedMotion) {
+        setAnimatedBullets(Array(bulletCount).fill(true))
+      } else {
+        setAnimatedBullets(Array(bulletCount).fill(false))
+
+        const delays = Array.from({ length: bulletCount }, (_, i) => i * 200)
+        delays.forEach((delay, index) => {
+          const timeout = setTimeout(() => {
+            setAnimatedBullets((prev) => {
+              const newState = [...prev]
+              newState[index] = true
+              return newState
+            })
+          }, delay)
+          timeouts.push(timeout)
+        })
+      }
+    } else {
       setAnimatedBullets(Array(bulletCount).fill(false))
-
-      const delays = Array.from({ length: bulletCount }, (_, i) => i * 200)
-      delays.forEach((delay, index) => {
-        setTimeout(() => {
-          setAnimatedBullets((prev) => {
-            const newState = [...prev]
-            newState[index] = true
-            return newState
-          })
-        }, delay)
-      })
-    } else if (hasIntersected && prefersReducedMotion) {
-      // If reduced motion is enabled, show all bullets immediately
-      setAnimatedBullets(Array(bulletCount).fill(true))
     }
-  }, [hasIntersected, prefersReducedMotion])
 
-  const iconComponents = [MessageCircle, Shield, Headphones, Clock, Smile]
+    return () => {
+      timeouts.forEach(clearTimeout)
+    }
+  }, [flagsVisible, prefersReducedMotion])
 
   const modalities = [
     {
@@ -49,19 +117,13 @@ export const CorrentezaSection = () => {
       title: "Aprofundamentos Específicos",
       description:
         "Para quem deseja seguir além da avaliação inicial. Podem incluir o mapeamento das funções executivas, análise do perfil de atenção e regulação emocional, e acompanhamento por mentoria. Cada percurso é único — construído junto à pessoa, conforme as necessidades e o ritmo do processo. Essas trilhas ampliadas contemplam autismo, TDAH e perfis sobrepostos, e ajudam a transformar a descoberta em um processo de fortalecimento e presença.",
-      subItems: [
-        "Travessia da Comunicação e Conexão — relações, linguagem e energia social.",
-        "Travessia da Previsibilidade e Rotina — estrutura, transições e segurança.",
-        "Travessia da Sensação e Sobrecarga — equilíbrio sensorial e autorregulação.",
-        "Travessia do Tempo e da Atenção — ritmo, foco e prazer nas tarefas.",
-        "Travessia da Emoção e Impulsividade — regulação afetiva e expressão simbólica.",
-      ],
+      subItems: APROFUNDAMENTOS_ITEMS,
       finalQuote: "A cada travessia, o mar ensina que compreender é, também, continuar.",
     },
   ]
 
   return (
-    <section id="correnteza" className="py-16 md:py-24 bg-neutral-cream" ref={sectionRef}>
+    <section id="correnteza" className="py-16 md:py-24 bg-neutral-cream">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="mb-12">
           <H2 className="mb-4">Correnteza</H2>
@@ -93,10 +155,11 @@ export const CorrentezaSection = () => {
 
         <h3 className="text-2xl md:text-3xl font-serif font-semibold text-primary-brown mb-8">Modalidades</h3>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_300px] gap-6 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_300px] gap-6 mb-12">
           {modalities.map((mod, cardIndex) => (
             <div
               key={mod.title}
+              ref={cardIndex === 1 ? flagsRef : undefined}
               className={`relative p-6 bg-white rounded-lg border-l-4 border-primary-orange hover:shadow-lg transition-shadow duration-300 flex flex-col h-full min-w-0 ${
                 cardIndex === 1 ? "lg:pr-12" : ""
               }`}
@@ -112,22 +175,9 @@ export const CorrentezaSection = () => {
 
               {mod.subItems && (
                 <div className="flex flex-col gap-3 my-4 lg:hidden">
-                  {mod.subItems.map((item, index) => {
-                    const IconComponent = iconComponents[index]
-                    return (
-                      <div
-                        key={item}
-                        className={`transition-all duration-500 ${
-                          animatedBullets[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-                        }`}
-                      >
-                        <div className="bg-white/50 rounded-full px-3 py-2 border border-primary-orange/20 flex items-center gap-2 shadow-sm hover:shadow-md active:shadow-md transition-all duration-200 ease-out hover:border-primary-orange/35 active:border-primary-orange/35 hover:-translate-y-[1px] active:-translate-y-[1px] focus-visible:ring-2 ring-primary-orange/30">
-                          {IconComponent && <IconComponent className="w-4 h-4 text-primary-orange flex-shrink-0" />}
-                          <p className="text-xs text-primary-brown/80">{item}</p>
-                        </div>
-                      </div>
-                    )
-                  })}
+                  {mod.subItems.map((item, index) => (
+                    <AnimatedListItem key={item.text} item={item} isVisible={animatedBullets[index]} isDesktop={false} />
+                  ))}
                 </div>
               )}
 
@@ -141,26 +191,9 @@ export const CorrentezaSection = () => {
 
           {modalities[1].subItems && (
             <div className="hidden lg:flex flex-col gap-4 pt-0 overflow-visible">
-              {modalities[1].subItems.map((item, index) => {
-                const IconComponent = iconComponents[index]
-                return (
-                  <div
-                    key={item}
-                    className={`flex flex-col items-start transition-all duration-500 ${
-                      animatedBullets[index] ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"
-                    }`}
-                  >
-                    <div className="relative lg:w-[360px] lg:max-w-none lg:-ml-16 lg:z-10 bg-white/50 backdrop-blur-sm rounded-full px-3 py-2 pl-6 pr-3 border border-primary-orange/20 flex items-center gap-0 min-w-0 overflow-visible shadow-sm hover:shadow-md transition-all duration-200 ease-out hover:border-primary-orange/35 hover:-translate-y-[1px] focus-visible:ring-2 ring-primary-orange/30">
-                      {IconComponent && (
-                        <div className="absolute left-1 top-1/2 -translate-y-1/2 -translate-x-1">
-                          <IconComponent className="w-4 h-4 text-primary-orange flex-shrink-0" />
-                        </div>
-                      )}
-                      <p className="text-xs text-primary-brown/80 whitespace-normal break-words">{item}</p>
-                    </div>
-                  </div>
-                )
-              })}
+              {modalities[1].subItems.map((item, index) => (
+                <AnimatedListItem key={item.text} item={item} isVisible={animatedBullets[index]} isDesktop={true} />
+              ))}
             </div>
           )}
         </div>
@@ -177,7 +210,7 @@ export const CorrentezaSection = () => {
 
         <div className="pt-6 border-t border-primary-brown/20">
           <p className="text-xs text-primary-brown/60 text-center">
-            Scheilla Soares — psicóloga e mãe atípica CRP 12/01849
+              Scheilla Soares — psicóloga e neuropsicóloga CRP 12/01849
             <br />
             Escutas e Travessias — Psicologia e neurodiversidade
           </p>

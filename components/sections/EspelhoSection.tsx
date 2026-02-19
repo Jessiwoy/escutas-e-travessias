@@ -50,11 +50,11 @@ Reconhecer o mascaramento é o primeiro passo para parar de se esconder.`,
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Depois do diagnóstico",
+      title: "Outras Travessias",
       description:
         "Nesta seção, compartilho histórias de profissionais que, já na vida adulta e em plena atuação clínica, descobriram em si mesmos a neurodivergência",
       materialId: "espelho_3", // Adicionado materialId
-      content: `Depois do diagnóstico
+      content: `Outras Travessias
 
 Nesta seção, compartilho histórias de profissionais que, já na vida adulta e em plena atuação clínica, descobriram em si mesmos a neurodivergência.
 
@@ -81,7 +81,7 @@ Essas histórias são convites para que você também se reconheça, se celebre 
             <H2 className="mb-4">O Espelho-d'Água</H2>
             <Subtitle>Neurodiversidade e reconhecimento</Subtitle>
 
-            <Quote className="my-8 text-left">
+            <Quote className="my-8">
               "Nem todo labirinto é prisão — alguns são apenas formas diferentes de pensar."
             </Quote>
           </div>
