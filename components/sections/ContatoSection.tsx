@@ -280,7 +280,7 @@ export const ContatoSection = () => {
               )}
             </div>
 
-            <Button type="submit" disabled={formStatus === "loading"} className="w-full relative">
+            <Button type="submit" disabled={formStatus === "loading"} className="w-full relative py-2 text-sm">
               {formStatus === "loading" ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin mr-2 inline-block" />

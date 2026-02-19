@@ -274,7 +274,7 @@ há outras marés esperando por você em:`,
             {/* Previous Button */}
             <button
               onClick={prevCard}
-              className="flex-shrink-0 p-1.5 md:p-2 hover:bg-primary-brown/10 rounded-full transition-all duration-300 group"
+              className="flex-shrink-0 p-1.5 md:p-2 hover:bg-primary-brown/10 rounded-full transition-all duration-300 group cursor-pointer"
               aria-label="Carta anterior"
             >
               <ChevronLeft className="w-5 h-5 md:w-7 md:h-7 text-primary-brown group-hover:text-primary-orange group-hover:scale-110 transition-all" />
@@ -340,7 +340,7 @@ há outras marés esperando por você em:`,
                             setSlideDirection(index > currentCardIndex ? "left" : "right")
                             setCurrentCardIndex(index)
                           }}
-                          className={`w-2 h-2 rounded-full transition-all duration-300 hover:scale-110 ${
+                          className={`w-2 h-2 rounded-full transition-all duration-300 hover:scale-110 cursor-pointer ${
                             index === currentCardIndex
                               ? "bg-primary-brown w-5"
                               : "bg-primary-brown/30 hover:bg-primary-brown/50"
@@ -358,7 +358,7 @@ há outras marés esperando por você em:`,
             {/* Next Button */}
             <button
               onClick={nextCard}
-              className="flex-shrink-0 p-1.5 md:p-2 hover:bg-primary-orange/10 rounded-full transition-all duration-300 group"
+              className="flex-shrink-0 p-1.5 md:p-2 hover:bg-primary-orange/10 rounded-full transition-all duration-300 group cursor-pointer"
               aria-label="Próxima carta"
             >
               <ChevronRight className="w-5 h-5 md:w-7 md:h-7 text-primary-brown group-hover:text-primary-orange group-hover:scale-110 transition-all" />
