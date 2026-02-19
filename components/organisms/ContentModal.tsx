@@ -181,7 +181,7 @@ export const ContentModal = ({ isOpen, onClose, title, content, materialId }: Co
               />
             </div>
 
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button type="submit" className="w-full py-2 text-sm" disabled={isLoading}>
               {isLoading ? "Enviando..." : "Receber conteúdo"}
             </Button>
           </form>

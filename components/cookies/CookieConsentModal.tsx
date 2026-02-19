@@ -302,18 +302,18 @@ export function CookieConsentModal({
             </div>
           </div>
 
-          <div className="border-t border-primary-brown/10 p-4 flex flex-col sm:flex-row gap-2">
-            <Button onClick={handleReject} variant="primary" className="flex-1 py-2 text-sm">
+          <div className="border-t border-primary-brown/10 p-3 flex flex-col sm:flex-row gap-2">
+            <Button onClick={handleReject} variant="ghost" className="flex-1 py-1.5 text-xs shadow-none">
               Rejeitar
             </Button>
             <Button
               onClick={handleSave}
               variant="secondary"
-              className="flex-1 py-2 text-sm border-2 border-primary-orange bg-transparent text-primary-orange hover:bg-primary-orange hover:text-white"
+              className="flex-1 py-1.5 text-xs border border-primary-orange/40 bg-transparent text-primary-brown hover:bg-primary-orange/10 shadow-none hover:shadow-none"
             >
-              Salvar minhas preferências
+              Salvar preferencias
             </Button>
-            <Button onClick={handleAcceptAll} variant="primary" className="flex-1 py-2 text-sm">
+            <Button onClick={handleAcceptAll} variant="primary" className="flex-1 py-1.5 text-xs">
               Aceitar tudo
             </Button>
           </div>

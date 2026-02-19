@@ -22,12 +22,12 @@ export function FloatingButtons({ onCookieClick }: FloatingButtonsProps) {
         )}
 
         <a
-          href="https://wa.me/554896634513"
+          href="https://wa.me/5548996412231"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => setShowWhatsAppTooltip(true)}
           onMouseLeave={() => setShowWhatsAppTooltip(false)}
-          className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-primary-brown hover:bg-primary-brown/80 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 animate-pulse-soft"
+          className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-primary-brown hover:bg-primary-brown/80 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-110 animate-pulse-soft cursor-pointer"
           aria-label="Abrir WhatsApp"
         >
           <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
@@ -37,7 +37,7 @@ export function FloatingButtons({ onCookieClick }: FloatingButtonsProps) {
       {/* Cookie Button - Bottom Left */}
       <button
         onClick={onCookieClick}
-        className="fixed bottom-6 left-6 z-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary-brown hover:bg-primary-brown/80 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110"
+        className="fixed bottom-6 left-6 z-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary-brown hover:bg-primary-brown/80 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110 cursor-pointer"
         aria-label="Preferências de cookies"
         title="Preferências de cookies"
       >
