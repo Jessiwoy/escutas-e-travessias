@@ -111,7 +111,7 @@ export const MATERIALS_CATALOG: Record<string, MaterialItem> = {
     sectionId: "praia",
     sectionTitle: "A Praia",
     materialTitle: "Linha 1 — Crescer Diferente",
-    materialLink: "https://drive.google.com/file/d/1JNdxGeESKLVQRd_i6Dc1PzA9ztp6RfL9/view?usp=drive_link",
+    materialLink: "https://drive.google.com/file/d/1rjqojMx80GNOd5IXwF828-vVt17EWrmX/view?usp=sharing",
     clientEmailSubject: "Novo download — A Praia: Crescer Diferente",
     userEmailSubject: "Seu material: Crescer Diferente",
   },
