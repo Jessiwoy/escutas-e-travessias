@@ -22,7 +22,7 @@ export function FloatingButtons({ onCookieClick }: FloatingButtonsProps) {
         )}
 
         <a
-          href="https://wa.me/5548996412231"
+          href="https://wa.me/5548992193067"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => setShowWhatsAppTooltip(true)}
