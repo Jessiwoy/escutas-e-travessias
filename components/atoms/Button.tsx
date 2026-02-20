@@ -16,7 +16,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           "shadow-md hover:shadow-lg",
           {
             "bg-primary-orange text-white hover:scale-105 hover:brightness-110": variant === "primary",
-            "bg-neutral-taupe text-primary-brown hover:bg-primary-brown hover:text-white": variant === "secondary",
+            "bg-neutral-taupe text-primary-brown hover:bg-primary-orange/15 hover:text-primary-orange":
+              variant === "secondary",
             "bg-transparent text-primary-brown hover:text-primary-orange underline underline-offset-4 shadow-none":
               variant === "ghost",
           },
