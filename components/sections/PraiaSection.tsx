@@ -108,7 +108,7 @@ Explorar materiais para mães`,
             <p className="text-xs text-primary-brown/60 text-center">
               Scheilla Soares — psicóloga e neuropsicóloga CRP 12/01849
               <br />
-              Escutas e Travessias — Psicologia e neurodiversidade
+              Escutas e Travessias — Psicologia Neuroafirmativa
             </p>
           </div>
         </div>
