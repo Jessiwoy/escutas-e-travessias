@@ -15,7 +15,7 @@ import { WaveDivider } from "@/components/atoms/WaveDivider"
 
 export default function Home() {
   return (
-    <main className="min-h-screen pt-16 md:pt-20" role="main">
+    <main className="min-h-screen" role="main">
       <Navbar />
       <HeroSection />
       <IntroSection />

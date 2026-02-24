@@ -12,7 +12,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative w-full h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] flex items-center justify-center"
+      className="relative w-full h-screen flex items-center justify-center"
       role="banner"
       aria-label="Imagem principal"
     >
@@ -33,7 +33,7 @@ export const HeroSection = () => {
           Escutas e Travessias
         </h1>
         <p className="font-[family-name:var(--font-hero-subtitle)] text-sm sm:text-base md:text-lg lg:text-xl italic text-black mt-2 md:mt-3 tracking-wider drop-shadow-[0_1px_4px_rgba(0,0,0,0.25)]">
-          Neurodiversidade, Psicologia e Maternidade Atípica
+          Psicologia Neuroafirmativa
         </p>
       </div>
 
