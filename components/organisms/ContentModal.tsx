@@ -29,18 +29,6 @@ export const ContentModal = ({ isOpen, onClose, title, content, materialId }: Co
       return
     }
 
-    try {
-      const lastSubmit = localStorage.getItem("escutas_et_last_submit")
-      if (lastSubmit) {
-        const elapsed = Date.now() - Number.parseInt(lastSubmit, 10)
-        if (elapsed < 60000) {
-          return
-        }
-      }
-    } catch (error) {
-      // Ignore localStorage errors
-    }
-
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       toast({
@@ -58,12 +46,6 @@ export const ContentModal = ({ isOpen, onClose, title, content, materialId }: Co
         variant: "destructive",
       })
       return
-    }
-
-    try {
-      localStorage.setItem("escutas_et_last_submit", Date.now().toString())
-    } catch (error) {
-      // Ignore localStorage errors
     }
 
     setIsLoading(true)
