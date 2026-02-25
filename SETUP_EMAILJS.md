@@ -6,8 +6,12 @@ Este documento explica como configurar o sistema de envio de e-mails via EmailJS
 
 O projeto utiliza EmailJS com **2 templates reutilizaveis** que atendem tanto o sistema de leads quanto o formulario de contato:
 
-1. **Template A (Cliente)** - Notificacao para Scheilla sobre novos contatos/leads
-2. **Template B (Usuario)** - E-mail de boas-vindas com link do material
+1. **Template A (Cliente)** - Notificacao para Scheilla sobre novos contatos e downloads
+2. **Template B (Usuario)** - E-mail de resposta automática com link do material solicitado
+
+O template do cliente e reutilizado para:
+- notificacao de download de material
+- recebimento de mensagens do formulario de contato
 
 ### Materiais Cadastrados (12 total)
 
@@ -42,53 +46,22 @@ Acesse [emailjs.com](https://www.emailjs.com/) e crie uma conta gratuita.
 
 ### 3. Criar Templates
 
-Voce precisa criar **2 templates** (reutilizaveis para todas as funcionalidades):
+Voce precisa criar **2 templates**, que serao reutilizados em todo o projeto.
 
 ---
 
 #### Template A: Notificacao para Cliente
 
-**Nome sugerido:** `Notificacao Cliente`
+**Uso:**
+- Download de material
+- Formulario de contato
+
+**Nome sugerido:** `Cliente`
 
 Este template recebe todos os contatos do site. Os campos sao preenchidos de acordo com a origem:
 - **Download de material**: preenche dados do material, deixa mensagem/topico vazios
 - **Formulario de contato**: preenche mensagem/topico, deixa dados do material vazios
 
-**Conteudo do Template:**
-
-```
-Voce recebeu um novo contato via {{source}} no site Escutas e Travessias.
-
-{{lead_name}}
-
-Email: {{lead_email}}
-WhatsApp: {{lead_whatsapp}}
-
----
-
-Mensagem do contato
-
-Assunto: {{lead_topic}}
-
-Mensagem:
-{{lead_message}}
-
----
-
-Data/Hora: {{timestamp}}
-
----
-
-Detalhes do download (se aplicavel)
-
-Secao: {{section_title}}
-Material: {{material_title}}
-ID do material: {{material_id}}
-
----
-
-Responda este e-mail para falar diretamente com o contato.
-```
 
 **Variaveis utilizadas:**
 
@@ -109,52 +82,13 @@ Responda este e-mail para falar diretamente com o contato.
 
 #### Template B: E-mail para Usuario
 
-**Nome sugerido:** `Material Usuario`
+**Nome sugerido:** `Usuario`
 
 Este template envia o material para o usuario apos o cadastro.
 
-**Conteudo do Template:**
+**Uso:**
+- Envio do material solicitado
 
-```
-Ola, {{lead_name}},
-
-Que bom que voce chegou.
-
-O Escutas e Travessias nasceu do encontro entre psicologia, experiencia vivida e cuidado com os ritmos humanos — especialmente quando a vida pede pausa, escuta e reorganizacao interna.
-
-Os materiais que voce recebe aqui nao sao respostas prontas nem formulas de desempenho. Eles sao convites. Convites para olhar com mais gentileza para si, para os seus processos e para aquilo que, muitas vezes, nao encontra lugar nos discursos rapidos do cotidiano.
-
-Use este material no seu tempo.
-Leia aos poucos, se precisar.
-Pare quando for demais.
-Retome quando fizer sentido.
-
-Este espaco foi criado para acolher travessias reais — inclusive as silenciosas.
-
-Se quiser acompanhar outros conteudos, reflexoes e materiais, voce sera bem-vinda(o).
-Se preferir apenas ficar com o que chegou agora, isso tambem esta absolutamente certo.
-
----
-
-Seu material
-
-{{material_title}}
-
-Acessar material: {{material_link}}
-
-Se o botao nao abrir, copie e cole este link no navegador:
-{{material_link}}
-
----
-
-Obrigada pela confianca.
-
-Com cuidado,
-Scheilla Soares
-Psicologa | Neuropsicologa
-CRP 12/01849
-Escutas e Travessias
-```
 
 **Variaveis utilizadas:**
 
@@ -182,7 +116,7 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_USER_ID=id_do_template_b
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=sua_public_key
 ```
 
-**Apenas 4 variaveis sao necessarias** (ambos os templates sao reutilizados para leads e contato).
+**Apenas 4 variaveis sao necessarias** para o funcionamento completo do sistema.
 
 ## Gerenciamento de Materiais
 
@@ -201,7 +135,6 @@ enseada_1: {
   userEmailSubject: "Seu material: Aprendendo a parar",
 },
 ```
-
 ### Comportamento do Sistema
 
 **Quando `materialLink` esta vazio (`""`):**
@@ -243,7 +176,7 @@ novo_material: {
 
 **Resultado esperado:**
 - Template A enviado para cliente (com dados do material, sem mensagem)
-- Template B enviado para usuario (com link do material)
+- Template B enviado para usuario (com link do material + mensagem)
 
 ### Formulario de Contato
 
@@ -268,20 +201,6 @@ novo_material: {
 
 **"Material nao encontrado":**
 - Verifique se o `materialId` no card corresponde ao ID no catalogo
-
-## Deploy
-
-### Vercel
-
-1. Va em **Project Settings** > **Environment Variables**
-2. Adicione cada variavel individualmente
-3. Marque para quais ambientes (Production, Preview, Development)
-
-### Render.com
-
-1. Va em **Environment** no painel do servico
-2. Adicione cada variavel com seu valor
-3. Faca redeploy do servico
 
 ## Seguranca
 

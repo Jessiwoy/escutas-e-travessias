@@ -50,14 +50,14 @@ Este é um site one-page com navegação suave entre seções, sistema de captur
 
 1. **Hero** - Apresentação inicial com imagem de fundo
 2. **Intro** - Introdução "Escutas e Travessias"
-3. **Cartas** - Carrossel com duas cartas (Lógicas e Subjetividade)
-4. **A Corrente** - Avaliação neurofuncional e mentorias (com pills animadas)
-5. **A Enseada** - Práticas de presença (3 materiais para download)
-6. **O Espelho-d'Água** - Neurodivergência em mulheres (3 materiais)
-7. **O Cais** - Relatos de travessia (4 materiais)
-8. **A Praia** - Linhas editoriais (2 materiais)
+3. **A Enseada** - Práticas de presença (3 materiais para download) 
+4. **O Espelho-d'Água** - Neurodivergência em mulheres (3 materiais)  
+5. **Correnteza** - Avaliação neurofuncional e mentorias (com pills animadas) 
+6. **O Cais** - Relatos de travessia (4 materiais) 
+7. **A Praia** - Linhas editoriais (2 materiais)
+8. **Cartas** - Carrossel com duas cartas (Lógicas e Subjetividade) 
 9. **Nascente e o Mar** - Sobre Scheilla Soares
-10. **A Travessia** - Citação de encerramento
+10. **Convite** - Citação de encerramento
 11. **Contato** - Formulário funcional via EmailJS
 
 ## Instalação
@@ -93,7 +93,7 @@ Crie um arquivo `.env.local` na raiz do projeto:
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=seu_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_CLIENT_ID=template_para_cliente
 NEXT_PUBLIC_EMAILJS_TEMPLATE_USER_ID=template_para_usuario
-NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT_ID=template_para_contato
+NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT_ID=template_para_cliente
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=sua_public_key
 ```
 
@@ -104,31 +104,15 @@ Consulte `SETUP_EMAILJS.md` para instruções detalhadas de configuração.
 ```bash
 pnpm dev      # Servidor de desenvolvimento
 pnpm build    # Build de produção
-pnpm start    # Servidor de produção
 pnpm lint     # Verificação de lint
 ```
-
-## Deploy
-
-### Render.com
-
-1. Conecte o repositório GitHub
-2. Configure as variáveis de ambiente no painel do Render
-3. Build Command: `pnpm install && pnpm build`
-4. Start Command: `pnpm start`
-
-### Vercel
-
-1. Importe o projeto do GitHub
-2. Configure as variáveis de ambiente
-3. Deploy automático
 
 ## Funcionalidades
 
 ### Sistema de Leads
 
 - Captura nome e e-mail de usuários interessados em materiais
-- Envia notificação para o cliente (Scheilla)
+- Envia notificação para o cliente 
 - Envia material para o usuário
 - 12 materiais cadastrados no catálogo
 
