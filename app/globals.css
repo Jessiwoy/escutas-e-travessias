@@ -82,7 +82,6 @@
 }
 
 @theme inline {
-  /* Updated fonts to use Geist for body and Noto Serif SC for headings */
   --font-sans: "Geist", "Geist Fallback", system-ui, sans-serif;
   --font-serif: "Noto Serif SC", "Georgia", serif;
   --font-display: "Patrick Hand", cursive;

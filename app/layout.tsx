@@ -37,6 +37,12 @@ const radley = Radley({
   display: "swap",
 })
 
+const playwriteUSModern = Playwrite_US_Modern({
+  weight: ["400"],
+  variable: "--font-hero-title",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   title: "Escutas e Travessias | Neurodiversidade, Psicologia e Maternidade Atípica",
   description:
