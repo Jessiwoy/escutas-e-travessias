@@ -29,7 +29,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-black/15" />
 
       <div className="absolute inset-x-0 top-[14%] sm:top-[18%] md:top-[21%] z-10 text-center flex flex-col items-center px-4">
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-white tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
+        <h1 className="font-[family-name:var(--font-hero-title)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-white tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
           Escutas e Travessias
         </h1>
         <p className="font-[family-name:var(--font-hero-subtitle)] text-sm sm:text-base md:text-lg lg:text-xl italic text-black mt-2 md:mt-3 tracking-wider drop-shadow-[0_1px_4px_rgba(0,0,0,0.25)]">

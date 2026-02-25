@@ -87,6 +87,7 @@
   --font-serif: "Noto Serif SC", "Georgia", serif;
   --font-display: "Patrick Hand", cursive;
   --font-hero-subtitle: "Radley", "Georgia", serif;
+  --font-hero-title: "Playwrite US Modern", cursive;
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
 
   /* Custom color tokens */

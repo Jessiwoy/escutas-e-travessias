@@ -4,6 +4,7 @@ import { Geist } from "next/font/google"
 import { Noto_Serif_SC } from "next/font/google"
 import { Patrick_Hand } from "next/font/google"
 import { Radley } from "next/font/google"
+import { Playwrite_US_Modern } from "next/font/google"
 
 import "./globals.css"
 import { CookieProvider } from "@/components/cookies/CookieProvider"
